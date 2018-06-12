@@ -10,19 +10,26 @@
 <body>
   <div class="container">
     <div class="row">
-        <div id="collapseExample" [ngbCollapse]="isCollapsed">
-          <div class="col-md-4 col-lg-3">
-            <app-menu></app-menu>
-          </div>
+      <div id="collapseExample" [ngbCollapse]="isCollapsed">
+        <div class="col" id="sidebar">
+          <app-menu></app-menu>
+        </div>
       </div>
       <div class="col-md-8 col-lg-9">
-        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-           [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-           <fa name="bars"></fa>
-         </button>
-         <app-lista-noticias></app-lista-noticias>
+        <div class="col">
+          <div class="col col-md-1 col-lg-1">
+            <button type="button" class="btn btn-outline-danger" (click)="isCollapsed = !isCollapsed"
+               [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+               <fa name="bars"></fa>
+             </button>
+           </div>
+           <app-header></app-header>
+         </div>
+         <div class="col">
+           <app-lista-noticias></app-lista-noticias>
+         </div>
       </div>
+    </div>
   </div>
-</div>
 </body>
 </html>

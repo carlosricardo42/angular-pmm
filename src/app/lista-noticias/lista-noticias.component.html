@@ -1,6 +1,7 @@
-<h2>Datos Relevantes {{lista_noticias.length}} noticias</h2>
+
 <div class="row">
   <div class="col">
+    <h2>Datos Relevantes {{lista_noticias.length}} noticias</h2>
     <app-noticias *ngFor="let noticia of lista_noticias"
     [noticia]='noticia'>
     </app-noticias>

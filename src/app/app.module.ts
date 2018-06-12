@@ -8,6 +8,7 @@ import { ListaNoticiasComponent } from './lista-noticias/lista-noticias.componen
 import { NoticiasComponent } from './noticias/noticias.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     MenuComponent,
     ListaNoticiasComponent,
     NoticiasComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
