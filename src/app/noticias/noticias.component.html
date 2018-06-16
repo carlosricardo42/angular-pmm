@@ -1,4 +1,15 @@
-<div class="col">
-  <h3>{{noticia.title}}</h3>
-  <p>{{noticia.description}}</p>
+<div class="card" >
+  <a  routerLink="/noticias/{{noticia.id}}" routerLinkActive="active" class="image" >
+    <img src="../../assets/images/{{noticia.image}}" class="card-img-top img-fluid rounded">
+  </a>
+  <div class="card-body">
+    <h5 class="card-title">
+      <a routerLink="/noticias/{{noticia.id}}" routerLinkActive="active">
+        <span class="badge">{{noticia.id}}</span> {{noticia.title}}
+      </a>
+    </h5>
+    <p class="card-text">{{noticia.description}}</p>
+    <a routerLink="/noticias/{{noticia.id}}" routerLinkActive="active"
+    class="btn btn-outline-danger btn-lg">More</a>
+  </div>
 </div>

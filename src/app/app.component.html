@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bootstrap 4 - Vertical Menu Example</title>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div id="collapseExample" [ngbCollapse]="isCollapsed">
-        <div class="col" id="sidebar">
-          <app-menu></app-menu>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="collapseExample" [ngbCollapse]="isCollapsed">
+          <div class="col" id="sidebar">
+            <app-menu></app-menu>
+          </div>
+        </div>
+        <div class="col">
+          <div class="col">
+            <div class="col">
+              <button type="button" class="btn btn-outline-danger" (click)="isCollapsed = !isCollapsed"
+                 [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                 <fa name="bars"></fa>
+               </button>
+             </div>
+             <app-header></app-header>
+           </div>
+           <div class="row">
+             <div class="col">
+               <router-outlet></router-outlet>
+           </div>
+           </div>
         </div>
       </div>
-      <div class="col-md-8 col-lg-9">
-        <div class="col">
-          <div class="col col-md-1 col-lg-1">
-            <button type="button" class="btn btn-outline-danger" (click)="isCollapsed = !isCollapsed"
-               [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-               <fa name="bars"></fa>
-             </button>
-           </div>
-           <app-header></app-header>
-         </div>
-         <div class="col">
-           <app-lista-noticias></app-lista-noticias>
-         </div>
-      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

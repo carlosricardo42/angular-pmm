@@ -1,9 +1,14 @@
-
 <div class="row">
   <div class="col">
-    <h2>Datos Relevantes {{lista_noticias.length}} noticias</h2>
-    <app-noticias *ngFor="let noticia of lista_noticias"
-    [noticia]='noticia'>
-    </app-noticias>
+    <header class="major">
+			<h2>DATOS RELEVANTES</h2>
+		</header>
   </div>
+</div>
+<div class="flex-row row">
+    <app-noticias *ngFor="let noticia of noticias$ | async"
+    [class.selected]="noticia.id === selectedId"
+    [noticia]='noticia'
+    class="col col-lg-6 col-md-6 col-sm-12 col-xs-12 default">
+    </app-noticias>
 </div>
