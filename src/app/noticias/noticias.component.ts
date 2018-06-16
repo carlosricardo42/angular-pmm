@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Noticia } from '../noticia';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import {Noticia,  NoticiaService }  from '../noticia.service';
 
 @Component({
   selector: 'app-noticias',
@@ -8,10 +10,8 @@ import { Noticia } from '../noticia';
 })
 export class NoticiasComponent implements OnInit {
   @Input() noticia: Noticia;
- // @Input('master') masterName: string;
+
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

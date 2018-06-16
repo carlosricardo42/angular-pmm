@@ -1,0 +1,30 @@
+.default {
+  padding-bottom: 20px;
+}
+
+/* Header underline title */
+header.major > :last-child {
+		border-bottom: solid 3px #f56a6a;
+		display: inline-block;
+		margin: 0 0 2em 0;
+		padding: 0 0.75em 0.5em 0;
+	}
+
+.major {
+  padding-top: 30px;
+}
+
+/* Size cards to the same height*/
+@media only screen and (min-width : 481px) {
+  .flex-row.row {
+	  flex-wrap: wrap;
+  }
+  .flex-row.row > [class*='col-'] {
+	  display: flex;
+	  flex-direction: column;
+  }
+   .flex-row.row:after,
+   .flex-row.row:before {
+     display: flex;
+  }
+}
